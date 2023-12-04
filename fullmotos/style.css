@@ -1,0 +1,61 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /*Esto es estandar para el box model*/
+}
+
+img {
+  /*Este es otro estandar recomendado para estos projectos*/
+  max-width: 100%;
+  display: block;
+}
+
+html {
+  color-scheme: dark; /*Esto es para que el sistema tenga preferencia entre dark y light
+  si se utiliza light y dark juntos el browser va a mirar el defult del sistema*/
+}
+
+
+body {
+  margin: 0;
+}
+
+.visually-hidden:not(:focus):not(:active) { /*El codigo viene de https://www.a11yproject.com/posts/how-to-hide-content/*/ 
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.card{
+  max-width: 12em;
+  min-width: 12em;
+}
+
+.navBar{
+  align-self: center;
+}
+
+.mainContent{
+  min-height: 85vh;
+  background-image: url("./images/mainBackground.webp");
+  background-size: cover;
+  background-position: center;
+  color: black;
+  display: flex;
+  align-items: center;
+}
+
+.mainContent_title{
+  margin-left: 1.5em;
+}
