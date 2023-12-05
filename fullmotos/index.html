@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fullmotos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./textAnimation.css">
+  </head>
+  <body>
+    
+<div class="performanceContainer">
+    <div class="performanceContainer__title">
+                
+        <h1 class="mainShadow retroshadow cdaHeader">CDA</h1>
+        <h2 class="mainShadow retroshadow fullmotosHeader">FULLMOTOS</h2>
+        <h6 class="mainShadow insetshadow siglasHeader">Centro de Diagnostico Automotor</h6>
+
+        <div class="mainShadow rotating-text">
+            <p class="mainShadow retroshadow tecnico-mecanica-header">TECNICO-MECANICA</p> <br>
+            <p class="mainShadow retroshadow tecnico-mecanica-header">
+            <span class="word alizarin">rapida.</span>
+            <span class="word wisteria">confiable.</span>
+            <span class="word peter-river">segura.</span>
+            <span class="word emerald">bien&nbsp;hubicada</span>
+            </p>
+        </div>
+        
+    </div>
+
+    <div class="performanceContainer__filterContainer">
+        <div class="filterContainer__background"> </div>
+    </div>
+</div>
+      
+
+<footer class="footer">
+
+    <div class="footer__card">
+        <p>horarios</p>
+        <p>lunes a viernes 7:00 A.M. - 6:00 pm</p>
+        <p>Sabados 7:00 A.M. - 3:00 P.M.</p>
+        <p>Jornada Continua!</p>
+    </div>
+
+    <nav class="footer__navBar">
+        <a href="index.html">Inicio</a> | 
+        <a href="./src/pages/about.html">Que Hacemos</a> |
+        <a href="/pricing">Tarifas</a> |
+        <a href="/contact">Contactanos</a>
+    </nav>
+
+    </section>
+        <div class="footer__card">
+            <p>direccion redes sociales</p>
+        </div>
+    </section>
+
+</footer>
+
+<!--Este svg es un filtro para los round borders del clip-path-->
+<svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <defs>
+        <filter id="round">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur" />    
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+            <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+        </filter>
+    </defs>
+</svg>
+
+    <script type="module" src="/main.js"></script>
+    <script type="module" src="/animation.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,137 @@
+@font-face { /*The @font-face ruleset, defining a single font for use elsewhere in your page’s CSS*/
+    font-family: 'Neuropol'; /*Declares the name for this font*/
+    font-style: normal;
+    font-weight: 100; /*Defines which font style and font weight this @font-face applies to*/
+    src: url(./fonts/neuropol.otf) format('woff2'); /*Location(s) where the font file can be found*/  
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215; /*The unicode character ranges this @font-face applies to*/  
+  }
+  
+/*Initial standars css properties*/
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box; /*Esto es estandar para el box model*/
+  }
+
+  h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+  }
+  
+  img {
+    /*Este es otro estandar recomendado para estos projectos*/
+    max-width: 100%;
+    display: block;
+  }
+  
+  html {
+    
+    letter-spacing: 1.5px;
+    font-family: 'Neuropol', sans-serif;
+    color-scheme: dark; /*Esto es para que el sistema tenga preferencia entre dark y light
+    si se utiliza light y dark juntos el browser va a mirar el defult del sistema*/
+  }
+  
+  body {
+    margin: 0;
+  }
+  
+  .visually-hidden:not(:focus):not(:active) { /*El codigo viene de https://www.a11yproject.com/posts/how-to-hide-content/*/ 
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+  
+/*CSS for the header, title, clip-path rounded, text animation*/
+
+  .performanceContainer{
+    min-height: 85vh;
+    position: relative;
+  }
+  
+  .performanceContainer__title{
+    position: absolute;
+    z-index: 1;
+    margin-left: 1.5em;
+    top: 20%;
+  }
+  .performanceContainer__filterContainer{
+  filter:url(#round);
+  }
+  
+  .filterContainer__background{
+    min-height: 85vh;
+    background-image: url("./images/mainBackground.webp");
+    background-size: cover;
+    background-position: center;
+    color: black;
+    clip-path: polygon(100% 0%, 100% 30%, 70% 30%, 70% 70%, 100% 70%, 100% 100%, 0 100%, 0 0);
+  }
+  
+ 
+
+/*Shadow for the header text*/
+
+  .mainShadow {
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+    font-size: 62px;
+    text-align: left;
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+
+    &.retroshadow {
+      color: #d5d5d5;
+      text-shadow: 
+        4px 4px 0px  #2c2c2c, 
+        7px 7px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    &.insetshadow {
+      display: inline;
+      font-size: 1.3rem;
+      color: #202020;
+      border-radius: 10px;
+      background-color: #d5d5d5;
+      letter-spacing: .1em;
+      text-shadow: 
+        -1px -1px 1px #111, 
+    }
+  }
+
+/*Styles for the header and the differents sizes*/
+
+.cdaHeader{
+  letter-spacing: -0.09em;
+  font-size: 10rem;
+  line-height: 0.7;  
+}
+
+.tecnico-mecanica-header{
+  font-size: 2.65rem;
+}
+
+  /*footer with navbar*/
+  
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+  }
+  
+  .footer__card{
+    font-family: 'Neuropol', sans-serif; 
+    min-width: 12em;
+    font-size: 0.6rem;
+  }
+  
+  .footer__navBar{
+    align-self: center;
+    
+  }
+  
+ 
+  
