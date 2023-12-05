@@ -45,12 +45,21 @@
     white-space: nowrap;
     width: 1px;
   }
-  
+
+/* External main continer that keeps the initial page in the 100% of the screen.*/
+
+.mainExternalContainer{
+  min-height: 100vh;
+  min-height: 100dvh;
+  overflow: hidden;
+}
+
 /*CSS for the header, title, clip-path rounded, text animation*/
 
   .performanceContainer{
-    min-height: 85vh;
+    height: 90vh;
     position: relative;
+    overflow: auto;
   }
   
   .performanceContainer__title{
@@ -62,13 +71,21 @@
   .performanceContainer__filterContainer{
   filter:url(#round);
   }
+
+  .performanceContainer__videoBanner{
+    position: absolute;
+    z-index: 1;
+    border-radius: 20px;
+    top: 50%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+  }
   
   .filterContainer__background{
-    min-height: 85vh;
+    min-height: 90vh;
     background-image: url("./images/mainBackground.webp");
     background-size: cover;
     background-position: center;
-    color: black;
     clip-path: polygon(100% 0%, 100% 30%, 70% 30%, 70% 70%, 100% 70%, 100% 100%, 0 100%, 0 0);
   }
   
@@ -118,20 +135,97 @@
   
   .footer {
     display: flex;
-    justify-content: space-between;
-    margin: 10px;
-  }
-  
-  .footer__card{
-    font-family: 'Neuropol', sans-serif; 
-    min-width: 12em;
-    font-size: 0.6rem;
+    justify-content: flex-end;
+    position: relative;
+    overflow: visible;
+    width: 100%;
   }
   
   .footer__navBar{
-    align-self: center;
-    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.8rem;
+  }
+
+  .footer__card{
+    margin: 0;
+    margin-right: 1.5em;
+    margin-top: 0.5rem;
   }
   
+  .footer__card__iconList{
+    list-style: none;
+    display: flex;
+    flex-direction:row;
+    margin: 0;
+  }
+
+  .footer__card > p {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
  
   
+
+
+/*This is the code for the 3d effect on the card, there is no bem here to not mess up the js file*/
+
+.card {
+  position: absolute;
+  font-size: 0.66rem;
+  width: 430px;
+  height: 50px;
+  border-radius: 10px;
+  border: 1px outset wheat;
+  overflow: hidden;
+  margin-left: 1.5em;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.2), 0 0 5px rgba(0,0,0,0.15);
+  transform: scale3d(1, 1, 1);
+  transition: all 0.2s ease-out, filter 0.75s ease-out;
+  background: rgba(0,0,0,0.2);
+  filter: grayscale(0.1) saturate(95%) brightness(95%) contrast(90%);
+  left: 0;
+  margin-top: 0.5rem;
+}
+
+.card:hover {
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4), 0 0 15px rgba(0,0,0,0.3);
+  filter: grayscale(0) saturate(105%) brightness(100%) contrast(100%);
+}
+
+.card > img {
+  position: absolute;
+  width: 108%;
+  height: 108%;
+  top: -4%;
+  z-index: -10;
+  transform: scale(1.05);
+  transition: all 0.2s ease-out, transform 0.2s ease-out, filter 0.75s ease-out;
+  filter: blur(0px);
+}
+
+.card.blur > img {
+  filter: blur(1px) grayscale(0.1) saturate(95%);
+}
+
+.card > .shineLayer {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 80%);
+  transition: all 0.2s ease-out;
+}
+
+.card__text{
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card__text > p {
+  margin: 0;
+  margin-left: 0.5em;
+}
