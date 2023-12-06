@@ -1,7 +1,5 @@
  
-  @import url(https://fonts.googleapis.com/css?family=Lato:600);
-  
-  
+  @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
   
   .rotating-text {
     font-family: Lato, sans-serif;
@@ -40,7 +38,7 @@
   }
   
   .alizarin {
-    color: #e74c3c;
+    color: #727679;
   }
   
   .wisteria {

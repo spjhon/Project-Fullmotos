@@ -36,7 +36,7 @@ function $(selector) {
   
     var transformCardImage = "rotateX(" + ((((mouseCoord.y / card.offsetHeight) * 10) - 5) * -1) + "deg) ";
     transformCardImage += "rotateY(" + ((((mouseCoord.x / card.offsetWidth) * 26) - 13) * -1) + "deg)";
-    card.querySelector("img").style.transform = transformCardImage;
+    /*card.querySelector("video").style.transform = transformCardImage;*/
   
     var backgroundShineLayerOpacity = ((mouseCoord.y / card.offsetHeight) * 0.3) + 0.1;
     var backgroundShineLayerDegree = (Math.atan2(mouseCoord.y - (card.offsetHeight / 2), mouseCoord.x - (card.offsetWidth / 2)) * 180 / Math.PI) - 90;
@@ -56,7 +56,7 @@ function $(selector) {
   function handleMouseLeave() {
     var card = this;
     card.style.transform = "scale3d(1, 1, 1)";
-    card.querySelector("img").style.transform = "";
+    /*card.querySelector("video").style.transform = "";*/
     card.querySelector(".shineLayer").style.background = "linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 80%)";
   
     $$('.card').forEach(function(c) {

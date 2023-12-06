@@ -25,11 +25,12 @@
   }
   
   html {
-    
+    color: #727679;
     letter-spacing: 1.5px;
     font-family: 'Neuropol', sans-serif;
     color-scheme: dark; /*Esto es para que el sistema tenga preferencia entre dark y light
     si se utiliza light y dark juntos el browser va a mirar el defult del sistema*/
+    background-color: black;
   }
   
   body {
@@ -54,40 +55,137 @@
   overflow: hidden;
 }
 
-/*CSS for the header, title, clip-path rounded, text animation*/
+/*CSS for the header, title, clip-path text animation, scroll botton*/
 
-  .performanceContainer{
+  .heroContainer{
     height: 90vh;
     position: relative;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    
   }
   
-  .performanceContainer__title{
+  .heroContainer::-webkit-scrollbar {
+    width: 0px; /* Adjust as needed */
+  }
+  
+  .heroContainer__scrollContainer {
+    position: absolute;
+    bottom: 2%;
+    right: 1.5em;
+    
+  }
+  
+  .chevron {
+    position: absolute;
+    width: 28px;
+    height: 8px;
+    opacity: 0;
+    transform: scale3d(0.5, 0.5, 0.5);
+    animation: move 3s ease-out infinite;
+  }
+  
+  .chevron:first-child {
+    animation: move 3s ease-out 1s infinite;
+  }
+  
+  .chevron:nth-child(2) {
+    animation: move 3s ease-out 2s infinite;
+  }
+  
+  .chevron:before,
+  .chevron:after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 51%;
+    background: #fff;
+  }
+  
+  .chevron:before {
+    left: 0;
+    transform: skew(0deg, 30deg);
+  }
+  
+  .chevron:after {
+    right: 0;
+    width: 50%;
+    transform: skew(0deg, -30deg);
+  }
+  
+  @keyframes move {
+    25% {
+      opacity: 1;
+  
+    }
+    33% {
+      opacity: 1;
+      transform: translateY(30px);
+    }
+    67% {
+      opacity: 1;
+      transform: translateY(40px);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+    }
+  }
+  
+  .chevrontext {
+    display: block;
+    margin-top: 75px;
+    margin-left: -30px;
+    font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+    font-size: 12px;
+    color: #fff;
+    text-transform: uppercase;
+    white-space: nowrap;
+    opacity: .25;
+    animation: pulse 2s linear alternate infinite;
+  }
+  
+  @keyframes pulse {
+    to {
+      opacity: 1;
+    }
+  }
+
+
+  .heroContainer__title{
     position: absolute;
     z-index: 1;
     margin-left: 1.5em;
-    top: 20%;
-  }
-  .performanceContainer__filterContainer{
-  filter:url(#round);
+    top: 32%;
   }
 
-  .performanceContainer__videoBanner{
+  .heroContainer__rotating-text{
+    position: absolute;
+    bottom: 2%;
+    left: 1.5em;
+  }
+ 
+  .heroContainer__videoBanner{
+    object-fit: cover;
     position: absolute;
     z-index: 1;
+    border: 2px solid black;
     border-radius: 20px;
-    top: 50%;
-    left: 85%;
-    transform: translate(-50%, -50%);
+    top: 30%;
+    right: 1.5em;
   }
   
-  .filterContainer__background{
+  /*este pedazo de codigo se separa el heroContainer principal para poder hacer el overflow*/
+  .heroContainer__background{
     min-height: 90vh;
     background-image: url("./images/mainBackground.webp");
     background-size: cover;
     background-position: center;
-    clip-path: polygon(100% 0%, 100% 30%, 70% 30%, 70% 70%, 100% 70%, 100% 100%, 0 100%, 0 0);
   }
+
+  
   
  
 
@@ -108,8 +206,7 @@
     }
 
     &.insetshadow {
-      display: inline;
-      font-size: 1.3rem;
+      font-size: 1rem;
       color: #202020;
       border-radius: 10px;
       background-color: #d5d5d5;
@@ -128,20 +225,23 @@
 }
 
 .tecnico-mecanica-header{
+  margin-top: 200px;
   font-size: 2.65rem;
 }
 
   /*footer with navbar*/
   
-  .footer {
+  .navBar {
     display: flex;
     justify-content: flex-end;
     position: relative;
     overflow: visible;
     width: 100%;
+    border-top: 1px outset #727679;
+    
   }
   
-  .footer__navBar{
+  .navBar__main{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -149,22 +249,41 @@
     font-size: 0.8rem;
   }
 
-  .footer__card{
+  .navBar__main > a {
+    color: #727679;
+    transition: color 0.3s ease;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: white; /* Color to transition to on hover */
+  }
+
+  .navBar__card{
     margin: 0;
     margin-right: 1.5em;
     margin-top: 0.5rem;
   }
   
-  .footer__card__iconList{
+  .navBar__card__iconList{
     list-style: none;
     display: flex;
     flex-direction:row;
     margin: 0;
   }
 
-  .footer__card > p {
+  .navBar__card > p {
     margin-top: 0;
     margin-bottom: 0.5rem;
+  }
+
+  svg {
+    fill: #727679; /* Initial color */
+    transition: fill 0.3s ease; /* Transition property, duration, and timing function */
+  }
+
+  svg:hover{
+    fill: white;
   }
  
   
@@ -175,17 +294,21 @@
 .card {
   position: absolute;
   font-size: 0.66rem;
-  width: 430px;
-  height: 50px;
   border-radius: 10px;
-  border: 1px outset wheat;
   overflow: hidden;
-  margin-left: 1.5em;
   box-shadow: 0 8px 30px rgba(0,0,0,0.2), 0 0 5px rgba(0,0,0,0.15);
   transform: scale3d(1, 1, 1);
   transition: all 0.2s ease-out, filter 0.75s ease-out;
   background: rgba(0,0,0,0.2);
   filter: grayscale(0.1) saturate(95%) brightness(95%) contrast(90%);
+  
+}
+
+.card--horarios{
+  width: 430px;
+  height: 50px;
+  border: 1px outset wheat;
+  margin-left: 1.5em;
   left: 0;
   margin-top: 0.5rem;
 }
