@@ -10,7 +10,7 @@
   </head>
   <body>
 
-<div class="mainExternalContainer">
+<div class="mainExternalContainer" >
 
  
 
@@ -21,14 +21,14 @@
                 <div class="chevron"></div>
                 <div class="chevron"></div>
                 <div class="chevron"></div>
-                <a href="#final">
+                <a href="#top" id="buttonScroll" onclick="handleClick()">
                     <span class="chevrontext">Horarios</span>
                 </a>
-                
-            
         </div>
 
-        <div class="heroContainer__title">
+        
+
+        <div class="heroContainer__title" >
                     
             <h1 class="mainShadow retroshadow cdaHeader">CDA</h1>
             <h2 class="mainShadow retroshadow fullmotosHeader">FULLMOTOS</h2>
@@ -53,7 +53,7 @@
             Your browser does not support the video tag.
         </video>
         
-        <div class="heroContainer__background"></div>
+        <div class="heroContainer__background" id="top"></div>
          
         <div>
             <h2>
@@ -121,8 +121,22 @@
 </div>   
 
     <script type="module" src="/textAnimation.js"></script>
-    <script type="module" src="./pages/about.js"></script>
-    
+    <script type="module" src="./cardAnimation.js"></script>
+    <script>
+        
+       function handleClick () {
+        let anchorScroll = document.getElementById ("buttonScroll")
+if (anchorScroll.hash == "#top"){
+    anchorScroll.setAttribute("href","#final")
+}else if (anchorScroll.hash == "#final"){
+    anchorScroll.setAttribute("href","#top")
+
+}
+       }
+
+        
+
+      </script>
 
   </body>
 </html>
