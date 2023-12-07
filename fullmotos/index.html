@@ -55,6 +55,9 @@
         
         <div class="heroContainer__background" id="top"></div>
          
+        <footer class="heroContainer__footer">
+
+        
         <div>
             <h2>
                 ESTE CONTENIDO VA ESCONDIDO
@@ -69,6 +72,8 @@
                 <p><strong>Jornada Continua!</strong></p>
             </div>
         </div>
+
+    </footer>
         
     </div>
         
@@ -128,6 +133,7 @@
         let anchorScroll = document.getElementById ("buttonScroll")
 if (anchorScroll.hash == "#top"){
     anchorScroll.setAttribute("href","#final")
+    console.log(window.innerWidth)
 }else if (anchorScroll.hash == "#final"){
     anchorScroll.setAttribute("href","#top")
 
