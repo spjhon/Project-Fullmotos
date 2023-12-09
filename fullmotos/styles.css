@@ -16,9 +16,10 @@
   *::before,
   *::after {
     box-sizing: border-box; /*Esto es estandar para el box model*/
+    
   }
 
-  h1,h2,h3,h4,h5,h6 {
+  h1,h2,h3,h4,h5,h6,p {
     margin: 0;
   }
   
@@ -57,7 +58,7 @@
   min-height: 100vh;
   min-height: 100dvh;
   overflow: hidden;
-  max-width: 1528px;
+  max-width: 1920px;
   margin: 0 auto;
 }
 
@@ -289,14 +290,52 @@
 /*footer*/
 
 .heroContainer__footer {
+  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
   max-height: 11em;
 }
 
-.footer__addressCard {
+.footer__container {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 0.5em;
+}
+
+.footer__container__addressCard {
   font-size: 0.8rem;
   margin-left: 1.5em;
   margin-bottom: 1.5em;
 }
+
+.iconAndText {
+  display: flex;
+  align-items: center;
+  margin: 0.5em 0.5em;
+}
+
+.iconAndText p {
+  margin-left: 0.5em;
+}
+
+.footer__container__logos{
+  width: 10rem;
+  margin-right: 1.5em;
+}
+
+.footer__container__copyrightReserved{
+  font-size: 0.75rem;
+  position: absolute;
+  right: 1.5em;
+  bottom: 0.2em;
+}
+
+.footer__container__copyrightReserved > p {
+  margin: 0;
+}
+
+
+
 
 
 
