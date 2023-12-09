@@ -1,148 +1,137 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fullmotos</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="./textAnimation.css">
-  </head>
-  <body>
+    <head>
+        <meta charset="UTF-8">
+        <!--<link rel="icon" type="image/svg+xml" href="/vite.svg" />-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Fullmotos</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="./textAnimation.css">
+    </head>
+<body>
 
-<div class="mainExternalContainer" >
+    <div class="mainExternalContainer" >
 
- 
+        <div class="heroContainer">
 
-    <div class="heroContainer">
-
-        <div class="heroContainer__scrollContainer">
-           
-                <div class="chevron"></div>
-                <div class="chevron"></div>
-                <div class="chevron"></div>
-                <a href="#top" id="buttonScroll" onclick="handleClick()">
-                    <span class="chevrontext">Horarios</span>
-                </a>
-        </div>
-
-        
-
-        <div class="heroContainer__title" >
-                    
-            <h1 class="mainShadow retroshadow cdaHeader">CDA</h1>
-            <h2 class="mainShadow retroshadow fullmotosHeader">FULLMOTOS</h2>
-            <h6 class="mainShadow insetshadow siglasHeader">Centro de Diagnostico Automotor</h6>
-        </div>
-
-        <div class="heroContainer__rotating-text">
-            <div class="mainShadow rotating-text">
-                <p class="mainShadow retroshadow tecnico-mecanica-header">&nbsp;</p> <br>
-                <p class="mainShadow retroshadow tecnico-mecanica-header">
-                <span class="word alizarin">REVISION&nbsp;TECNICO-MECANICA</span>
-                <span class="word alizarin">AMPLIAS&nbsp;INSTALACIONES</span>
-                <span class="word alizarin">PERITAJE</span>
-                <span class="word alizarin">EXCLUSIVO&nbsp;MOTOCICLETAS</span>
-                <span class="word alizarin">VENTA&nbsp;DE&nbsp;SOAT</span>
-                </p>
+            <div class="heroContainer__scrollContainer">
+            
+                    <div class="chevron"></div>
+                    <div class="chevron"></div>
+                    <div class="chevron"></div>
+                    <a href="#top" id="buttonScroll" onclick="handleClick()">
+                        <span class="chevrontext">Horarios</span>
+                    </a>
             </div>
-        </div>
 
-        <video width="426" height="240" autoplay loop muted controls="false" preload="false" class="heroContainer__videoBanner card">
-            <source src="./video/bikeVideo.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        
-        <div class="heroContainer__background" id="top"></div>
-         
-        <footer class="heroContainer__footer">
-
-        
-        <div>
-            <h2>
-                ESTE CONTENIDO VA ESCONDIDO
-            </h2>
-        </div>
-
-        <div class="card card--horarios" id="final">
-            <div class="card__text">
-                <p>horarios</p>
-                <p>lunes a viernes 7:00 A.M. - 6:00 pm</p>
-                <p>Sabados 7:00 A.M. - 3:00 P.M.</p>
-                <p><strong>Jornada Continua!</strong></p>
+            <div class="heroContainer__title" >
+                        
+                <h1 class="mainShadow retroshadow cdaHeader">CDA</h1>
+                <h2 class="mainShadow retroshadow fullmotosHeader">FULLMOTOS</h2>
+                <h6 class="mainShadow insetshadow siglasHeader">Centro de Diagnostico Automotor</h6>
             </div>
+
+            <video width="426" height="240" autoplay loop muted preload class="heroContainer__videoBanner card card--video">
+                <source src="./video/bikeVideo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+                
+            <div class="heroContainer__background" id="top"></div>
+                
+            <footer class="heroContainer__footer">
+
+                <div>
+                    <h2>
+                        Ubicados en el centro de Manizales
+                    </h2>
+                </div>
+
+                <address class="footer__addressCard">
+                    <p class="addressCard__title">HORARIO DE ATENCIÓN</p>
+                    <div class="addressCard__description">
+                        <p><strong>Lunes</strong> a <strong>Viernes</strong> de <strong>7:00 A.M</strong>. a <strong>6:00 P.M</strong>. <br>
+                        <strong>Sábados</strong> de <strong>7:00 A.M</strong>. a <strong>3:00 P.M.</strong><br>jornada continua.<br> <br>
+                        PBX: (+57) (6) 000 0000 - CEL: 000 000 00 00 - Email: <a href="mailto:cdafullmotosla25@gmail.com">cdafullmotosla25@gmail.com</a><br>
+                        <strong>Carrera 25 #17 - 66</strong> Manizales - Caldas - Colombia</p>
+                    </div>
+                </address>
+
+            </footer>
+                
         </div>
+            
+        <div class="navBar">
 
-    </footer>
+            <div class="navBar__rotating-text">
+                <div id=animatedText>
+
+                    <div id=flip>
+                    <div>
+                        <div>
+                            RAPIDO
+                        </div>
+                    </div>
+                    <div><div>CONFIABLE</div></div>
+                    <div><div>VENTA DE SOAT</div></div>
+                    </div>
+    
+                </div>
+            </div>
         
-    </div>
-        
 
+            <nav class="navBar__main">
+                <a href="index.html">Inicio</a> | 
+                <a href="./pages/about.html">Nuestros Servicios</a> |
+                <a href="/pricing">Tarifas</a> |
+                <a href="/contact">Contactanos</a>
+            </nav>
 
-    <div class="navBar">
-
-        
-
-        <nav class="navBar__main">
-            <a href="index.html">Inicio</a> | 
-            <a href="./pages/about.html">Nuestros Servicios</a> |
-            <a href="/pricing">Tarifas</a> |
-            <a href="/contact">Contactanos</a>
-        </nav>
-
-        </section>
+            
             <div class="navBar__card">
                 <p>Siguenos en:</p>
                 <ul class="navBar__card__iconList">
                     
                     <li>
-                        <a href="www.google.com">  
-                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" viewBox="0 0 50 50"">
+                        <a href="www.google.com" title="link">  
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="1.5625em" height="1.5625em" viewBox="0 0 50 50">
                                 <path d="M25,3C12.85,3,3,12.85,3,25c0,11.03,8.125,20.137,18.712,21.728V30.831h-5.443v-5.783h5.443v-3.848 c0-6.371,3.104-9.168,8.399-9.168c2.536,0,3.877,0.188,4.512,0.274v5.048h-3.612c-2.248,0-3.033,2.131-3.033,4.533v3.161h6.588 l-0.894,5.783h-5.694v15.944C38.716,45.318,47,36.137,47,25C47,12.85,37.15,3,25,3z"></path>
                             </svg>
                         </a>
                     </li>
                     <li>
-                        <a href="www.google.com">  
-                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" viewBox="0 0 16 16"">
+                        <a href="www.google.com" title="link">  
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="1.5625em" height="1.5625em" viewBox="0 0 16 16">
                                 <path d="M 5 1 C 2.791 1 1 2.791 1 5 L 1 11 C 1 13.209 2.791 15 5 15 L 11 15 C 13.209 15 15 13.209 15 11 L 15 5 C 15 2.791 13.209 1 11 1 L 5 1 z M 5 2 L 11 2 C 12.657 2 14 3.343 14 5 L 14 11 C 14 12.657 12.657 14 11 14 L 5 14 C 3.343 14 2 12.657 2 11 L 2 5 C 2 3.343 3.343 2 5 2 z M 5 3 C 3.895 3 3 3.895 3 5 L 3 11 C 3 12.105 3.895 13 5 13 L 11 13 C 12.105 13 13 12.105 13 11 L 13 5 C 13 3.895 12.105 3 11 3 L 5 3 z M 11.5 4 C 11.776 4 12 4.224 12 4.5 C 12 4.776 11.776 5 11.5 5 C 11.224 5 11 4.776 11 4.5 C 11 4.224 11.224 4 11.5 4 z M 8 5 C 9.657 5 11 6.343 11 8 C 11 9.657 9.657 11 8 11 C 6.343 11 5 9.657 5 8 C 5 6.343 6.343 5 8 5 z M 8 6 A 2 2 0 0 0 8 10 A 2 2 0 0 0 8 6 z"></path>
                             </svg>
                         </a>
                     </li>
                     <li>
-                        <a href="www.google.com">  
-                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" viewBox="0 0 16 16"">
+                        <a href="www.google.com" title="link">  
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="1.5625em" height="1.5625em" viewBox="0 0 16 16">
                                 <path d="M16,2.105l-0.274-0.222c0,0-1.109,0.747-1.752,0.814c-0.619-0.657-1.503-1.064-2.483-1.064c-1.88,0-3.405,1.511-3.405,3.374	c0,0.263,0.031,0.52,0.088,0.769c-2.829-0.14-4.578-1.79-6.256-3.832L1.201,2.272c0,0-0.457,1.339-0.457,2.766	c0,3.841,3.03,6.143,4.179,6.693c-1.294,1.139-4.401,0.984-4.401,0.984L0,13.337C0,13.337,1.885,15,5.22,15	c6.262,0,9.689-4.615,9.689-9.604c0-0.146-0.005-0.292-0.013-0.434C15.653,4.105,16,3.214,16,2.105z"></path>
                             </svg>
                         </a>
                     </li>
                 </ul>
             </div>
-        </section>
+            
 
-    </footer>
+        </div>   
+    </div>
 
-
-</div>   
-
-    <script type="module" src="/AtextAnimation.js"></script>
     <script type="module" src="./cardAnimation.js"></script>
     <script>
         
-       function handleClick () {
-        let anchorScroll = document.getElementById ("buttonScroll")
-if (anchorScroll.hash == "#top"){
-    anchorScroll.setAttribute("href","#final")
-    console.log(window.innerWidth)
-}else if (anchorScroll.hash == "#final"){
-    anchorScroll.setAttribute("href","#top")
+    function handleClick () {
+            let anchorScroll = document.getElementById ("buttonScroll")
+            if (anchorScroll.hash == "#top"){
+                anchorScroll.setAttribute("href","#final")
+                console.log(window.innerWidth)
+            }else if (anchorScroll.hash == "#final"){
+                anchorScroll.setAttribute("href","#top")
+            }
+    }
+    </script>
 
-}
-       }
-
-        
-
-      </script>
-
-  </body>
+</body>
 </html>
