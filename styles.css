@@ -1,0 +1,550 @@
+@font-face { /*The @font-face ruleset, defining a single font for use elsewhere in your page’s CSS*/
+    font-family: 'Neuropol'; /*Declares the name for this font*/
+    font-style: normal;
+    font-weight: 100; /*Defines which font style and font weight this @font-face applies to*/
+    src: url(./fonts/neuropol.otf) format('woff2'); /*Location(s) where the font file can be found*/  
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215; /*The unicode character ranges this @font-face applies to*/  
+  }
+  
+  :root {
+    font-size: calc(0.9em + 0.1vw);
+    
+   }
+
+/*Initial standars css properties*/
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box; /*Esto es estandar para el box model*/
+    
+  }
+
+  h1,h2,h3,h4,h5,h6,p {
+    margin: 0;
+  }
+  
+  img {
+    /*Este es otro estandar recomendado para estos projectos*/
+    max-width: 100%;
+    display: block;
+  }
+  
+  html {
+    color: #727679;
+    letter-spacing: 0.09375em;
+    font-family: 'Neuropol', sans-serif;
+    color-scheme: dark; /*Esto es para que el sistema tenga preferencia entre dark y light
+    si se utiliza light y dark juntos el browser va a mirar el defult del sistema*/
+    background-color: black;
+    
+  }
+  
+  body {
+    margin: 0;
+  }
+  
+  .visually-hidden:not(:focus):not(:active) { /*El codigo viene de https://www.a11yproject.com/posts/how-to-hide-content/*/ 
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+
+/* External main continer that keeps the initial page in the 100% of the screen.*/
+
+.mainExternalContainer{
+  min-height: 100vh;
+  min-height: 100dvh;
+  overflow: hidden;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+/*CSS for the header, title, clip-path text animation, scroll botton*/
+
+  .heroContainer{
+    height: 90vh;
+    min-height: 90dvh;
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+  
+  .heroContainer::-webkit-scrollbar {
+    width: 0px; /* Adjust as needed */
+  }
+  
+  .heroContainer__scrollContainer {
+    position: absolute;
+    bottom: 2%;
+    right: 1.5em;
+  }
+
+  /*El chevron el la animacion para que se baje a la seccion de logos y horarios */
+  
+  .chevron {
+    position: absolute;
+    width: 28px;
+    height: 8px;
+    opacity: 0;
+    transform: scale3d(0.5, 0.5, 0.5);
+    animation: move 3s ease-out infinite;
+  }
+  
+  .chevron:first-child {
+    animation: move 3s ease-out 1s infinite;
+  }
+  
+  .chevron:nth-child(2) {
+    animation: move 3s ease-out 2s infinite;
+  }
+  
+  .chevron:before,
+  .chevron:after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 51%;
+    background: #fff;
+  }
+  
+  .chevron:before {
+    left: 0;
+    transform: skew(0deg, 30deg);
+  }
+  
+  .chevron:after {
+    right: 0;
+    width: 50%;
+    transform: skew(0deg, -30deg);
+  }
+  
+  @keyframes move {
+    25% {
+      opacity: 1;
+  
+    }
+    33% {
+      opacity: 1;
+      transform: translateY(30px);
+    }
+    67% {
+      opacity: 1;
+      transform: translateY(40px);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+    }
+  }
+  
+  .chevrontext {
+    display: block;
+    margin-top: 75px;
+    margin-left: -30px;
+    font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+    font-size: 0.75rem;
+    color: #fff;
+    text-transform: uppercase;
+    white-space: nowrap;
+    opacity: .25;
+    animation: pulse 2s linear alternate infinite;
+  }
+  
+  @keyframes pulse {
+    to {
+      opacity: 1;
+    }
+  }
+
+  .title__logo{
+    margin-top: 1em;
+    text-align: center;
+  }
+
+  .heroContainer__title{
+    margin-left: 1.5em;
+  }
+ 
+  .heroContainer__videoBanner{
+    object-fit: cover;
+    border: 2px solid black;
+    border-radius: 20px;
+    margin-right: 1.5em;
+  }
+  
+  /*este pedazo de codigo se separa el heroContainer principal para poder hacer el overflow*/
+  .heroContainer__background{
+    min-height: 90vh;
+    background-image: url("./images/mainBackground.webp");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap
+    
+  }
+
+
+/*Shadow for the header text*/
+
+  .mainShadow {
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+    font-size: 3.875rem;
+    text-align: left;
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+
+    &.retroshadow {
+      color: #d5d5d5;
+      text-shadow: 
+        4px 4px 0px  #2c2c2c, 
+        7px 7px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    &.insetshadow {
+      font-size: 1rem;
+      color: #202020;
+      border-radius: 10px;
+      background-color: #d5d5d5;
+      letter-spacing: .1em;
+      text-shadow: 
+        -1px -1px 1px #111, 
+    }
+  }
+
+/*Styles for the header and the differents sizes*/
+
+.cdaHeader{
+  letter-spacing: -0.09em;
+  font-size: 10rem;
+  line-height: 0.7;  
+}
+
+.whatssappCachFrase {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+  /*navbar*/
+  
+  .navBar {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    overflow: visible;
+    width: 100%;
+    border-top: 1px outset #727679;
+    min-height: 10vh;
+    min-height: 10dvh
+  }
+
+  /*Styles for the burguer mobile button*/
+
+.navBar__burger-container {
+  position: absolute;
+  top: 1.5em;
+  right: 1.5em;
+  display: none;
+
+}
+
+
+/* This is hidden */
+#State{
+  display: none;
+}
+
+/* Draw content box for burguer */
+#burguer{
+  width: 40px;
+  height: 30px;
+  display: flex;
+  flex-flow: nowrap column;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+#burguer span{
+  width: 100%;
+  height: 3px;
+  border-radius: 2px;
+  background-color: white;
+  transition: all 0.2s;
+  transform-origin: 0;
+}
+
+#State:checked ~ #burguer span:first-child{
+  transform: rotate(43deg);
+}
+
+#State:checked ~ #burguer span:nth-child(2){
+  opacity: 0;
+}
+
+#State:checked ~ #burguer span:last-child{
+  transform: rotate(-43deg);
+}
+
+  /*Styles fot the rotating colorfull text*/
+
+  .navBar__rotating-text{
+    position: absolute;
+    align-self: center;
+    left: 1.5em;
+  }
+  
+  .navBar__main{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.8rem;
+    text-align: center;
+  }
+
+  .navBar__main > a {
+    color: #727679;
+    transition: color 0.3s ease;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: white; /* Color to transition to on hover */
+  }
+
+  .navBar__card{
+    margin: 0;
+    margin-right: 1.5em;
+    margin-top: 0.5em;
+  }
+  
+  .navBar__card__iconList{
+    list-style: none;
+    display: flex;
+    flex-direction:row;
+    margin: 0;
+  }
+
+  .navBar__card > p {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+  }
+
+  svg {
+    fill: #727679; /* Initial color */
+    transition: fill 0.3s ease; /* Transition property, duration, and timing function */
+  }
+
+  svg:hover{
+    fill: white;
+  }
+ 
+  
+/*footer*/
+
+.heroContainer__footer {
+  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+  
+}
+
+.footer__container {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 0.5em;
+  flex-wrap: wrap
+}
+
+.footer__container__addressCard {
+  font-size: 0.8rem;
+  margin-left: 1.5em;
+  margin-bottom: 1.5em;
+  border-left: 1px solid #727679;
+
+  padding-left: 1.5em;
+}
+
+.footer__container__addressCard > h2 {
+  margin-bottom: 1.5em;
+}
+
+.iconAndText {
+  display: flex;
+  align-items: center;
+  margin: 0.5em 0.5em;
+}
+
+.iconAndText svg {
+  min-width: 2em;
+}
+
+.iconAndText p {
+  margin-left: 0.5em;
+}
+
+.footer__container__logos{
+  max-width: 20rem;
+  margin-right: 1.5em;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.footer__container__copyrightReserved{
+  font-size: 0.75rem;
+  position: absolute;
+  right: 1.5em;
+  bottom: 0.2em;
+}
+
+.footer__container__copyrightReserved > p {
+  margin: 0;
+}
+
+
+
+
+
+
+
+/*This is the code for the 3d effect on the card, there is no bem here to not mess up the js file*/
+
+
+
+.card {
+  font-size: 0.66rem;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.2), 0 0 5px rgba(0,0,0,0.15);
+  transform: scale3d(1, 1, 1);
+  transition: all 0.2s ease-out, filter 0.75s ease-out;
+  background: rgba(0,0,0,0.2);
+  filter: grayscale(0.1) saturate(95%) brightness(95%) contrast(90%);
+  
+}
+
+.card--video {
+  height: 15rem;
+  width: 26.625rem;
+}
+
+.card:hover {
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4), 0 0 15px rgba(0,0,0,0.3);
+  filter: grayscale(0) saturate(105%) brightness(100%) contrast(100%);
+}
+
+.card > .shineLayer {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 80%);
+  transition: all 0.2s ease-out;
+}
+
+.card__text > p {
+  margin: 0;
+  margin-left: 0.5em;
+}
+
+.isOpen {
+  height: 100vh;
+}
+
+/*Responsive styles for the index.html*/
+
+@media (max-width: 50em) {
+  
+
+  .mainExternalContainer{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column-reverse
+
+    /*min-height: 100vh;
+    min-height: 100dvh;
+    overflow: hidden;
+    max-width: 1920px;
+    margin: 0 auto;*/
+  }
+  .mainExternalContainer:first-child {
+    grid-row: 2; /* Second row */
+  }
+  .mainExternalContainer::nth-child(2) {
+    grid-row: 1; /* Second row */
+  }
+
+  .heroContainer__background {
+    justify-content: center;
+    
+  }
+
+  .heroContainer__videoBanner {
+    margin: 0;
+  }
+
+  .heroContainer__title {
+    margin: 0;
+  }
+
+  .heroContainer.isOpenHidden {
+    display: none;
+  }
+
+  .navBar__rotating-text {
+    align-self: flex-start;
+    top: 0.7em;
+  }
+
+  .navBar__burger-container {
+    display: block;
+  }
+
+  .navBar__card {
+    display: none;
+  }
+
+  .navBar.isOpen .navBar__card {
+    align-self: flex-end;
+    margin-bottom: 1em;
+    display: block;
+  }
+
+  .navBar__main {
+    display: none;
+  }
+
+  .navBar.isOpen .navBar__main {
+    display: block;
+    font-size: 3rem;
+  }
+
+
+  .card--video {
+    width: 18em;
+    height: 15em;
+  }
+
+  .heroContainer__footer, .footer__container {
+    height: 90vh;
+    justify-content: center;
+  }
+
+  .footer__container__addressCard {
+    align-self: center;
+    font-size: 1rem;
+  }
+
+
+
+}
