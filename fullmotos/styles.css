@@ -8,6 +8,7 @@
   
   :root {
     font-size: calc(0.9em + 0.1vw);
+    
    }
 
 /*Initial standars css properties*/
@@ -16,7 +17,7 @@
   *::before,
   *::after {
     box-sizing: border-box; /*Esto es estandar para el box model*/
-    
+    transition: all 0.2s ease-out;
   }
 
   h1,h2,h3,h4,h5,h6,p {
@@ -36,6 +37,7 @@
     color-scheme: dark; /*Esto es para que el sistema tenga preferencia entre dark y light
     si se utiliza light y dark juntos el browser va a mirar el defult del sistema*/
     background-color: black;
+    
   }
   
   body {
@@ -160,27 +162,20 @@
     }
   }
 
-
-  .heroContainer__title{
-    position: absolute;
-    z-index: 1;
-    margin-left: 1.5em;
-    top: 22%;
-  }
-
   .title__logo{
     margin-top: 1em;
     text-align: center;
   }
+
+  .heroContainer__title{
+    margin-left: 1.5em;
+  }
  
   .heroContainer__videoBanner{
     object-fit: cover;
-    position: absolute;
-    z-index: 1;
     border: 2px solid black;
     border-radius: 20px;
-    top: 30%;
-    right: 1.5em;
+    margin-right: 1.5em;
   }
   
   /*este pedazo de codigo se separa el heroContainer principal para poder hacer el overflow*/
@@ -189,6 +184,11 @@
     background-image: url("./images/mainBackground.webp");
     background-size: cover;
     background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap
+    
   }
 
 
@@ -301,7 +301,7 @@
 
 .heroContainer__footer {
   font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
-  max-height: 11em;
+  
 }
 
 .footer__container {
@@ -310,6 +310,7 @@
   justify-content: space-between;
   align-items: flex-start;
   margin-top: 0.5em;
+  flex-wrap: wrap
 }
 
 .footer__container__addressCard {
