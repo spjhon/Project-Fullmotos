@@ -25,7 +25,7 @@
   }
   
   img {
-    /*Este es otro estandar recomendado para estos projectos*/
+    /*Este es otro estandar recomendado para estos projectos*/mainex
     max-width: 100%;
     display: block;
   }
@@ -68,6 +68,7 @@
 
   .heroContainer{
     height: 90vh;
+    min-height: 90dvh;
     position: relative;
     overflow-y: auto;
     overflow-x: hidden;
@@ -241,12 +242,62 @@
     overflow: visible;
     width: 100%;
     border-top: 1px outset #727679;
-    
+    min-height: 10vh;
+    min-height: 10dvh
   }
+
+  /*Styles for the burguer mobile button*/
+
+.navBar__burger-container {
+  position: absolute;
+  top: 1.5em;
+  right: 1.5em;
+
+}
+
+
+/* This is hidden */
+#State{
+  display: none;
+}
+
+/* Draw content box for burguer */
+#burguer{
+  width: 40px;
+  height: 30px;
+  display: flex;
+  flex-flow: nowrap column;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+#burguer span{
+  width: 100%;
+  height: 3px;
+  border-radius: 2px;
+  background-color: white;
+  transition: all 0.2s;
+  transform-origin: 0;
+}
+
+#State:checked ~ #burguer span:first-child{
+  transform: rotate(43deg);
+}
+
+#State:checked ~ #burguer span:nth-child(2){
+  opacity: 0;
+}
+
+#State:checked ~ #burguer span:last-child{
+  transform: rotate(-43deg);
+}
+
+  /*Styles fot the rotating colorfull text*/
 
   .navBar__rotating-text{
     position: absolute;
-    bottom: 2%;
+    align-self: center;
     left: 1.5em;
   }
   
@@ -397,4 +448,61 @@
 .card__text > p {
   margin: 0;
   margin-left: 0.5em;
+}
+
+
+/*Responsive styles for the index.html*/
+
+@media (max-width: 50em) {
+  
+
+  .mainExternalContainer{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column-reverse
+
+    /*min-height: 100vh;
+    min-height: 100dvh;
+    overflow: hidden;
+    max-width: 1920px;
+    margin: 0 auto;*/
+  }
+  .mainExternalContainer:first-child {
+    grid-row: 2; /* Second row */
+  }
+  .mainExternalContainer::nth-child(2) {
+    grid-row: 1; /* Second row */
+  }
+
+  .navBar.isOpen {
+    
+    min-height: 100vh;
+    min-height: 100dvh
+  }
+
+  .navBar__rotating-text {
+    align-self: flex-start;
+    top: 0.7em;
+  }
+
+  .navBar__card {
+    translate: 500px;
+  }
+
+  .navBar.isOpen .navBar__card {
+    align-self: flex-end;
+    margin-bottom: 1em;
+    translate: 0px;
+  }
+
+  .navBar__main {
+    translate: 500px
+  }
+
+  .navBar.isOpen .navBar__main {
+    translate: 0px;
+  }
+
 }

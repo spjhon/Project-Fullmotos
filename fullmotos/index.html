@@ -307,6 +307,15 @@
             
         <div class="navBar">
 
+            <div class="navBar__burger-container">
+                <input type="checkbox" id="State" />
+                <label id="burguer" for="State">
+                <span></span>
+                <span></span>
+                <span></span>
+                </label>
+            </div>
+
             <div class="navBar__rotating-text">
                 <div id=animatedText>
 
@@ -325,10 +334,12 @@
         
 
             <nav class="navBar__main">
-                <a href="index.html">Inicio</a> | 
+                
+                <a href="index.html">Inicio</a> | </li>
                 <a href="./pages/about.html">Nuestros Servicios</a> |
                 <a href="/pricing">Tarifas</a> |
                 <a href="/contact">Contactanos</a>
+                
             </nav>
 
             
@@ -380,6 +391,24 @@
                 anchorScroll.setAttribute("href","#top")
             }
     }
+
+    // Get the checkbox element
+    let checkbox = document.getElementById("State");
+    let burgerState = document.getElementsByClassName ("navBar");
+    let heroContainer = document.getElementsByClassName ("heroContainer");
+    let mainExternalContainer = document.getElementsByClassName ("mainExternalContainer");
+
+
+    // Add an event listener to the checkbox to detect changes in its state
+    checkbox.addEventListener("change", function() {
+    // Log the state of the checkbox to the console
+    console.log(heroContainer);
+    
+    burgerState[0].classList.toggle("isOpen");
+    mainExternalContainer[0].classList.toggle("isOpen");
+
+    });
+
     </script>
 
 </body>
