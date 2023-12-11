@@ -336,7 +336,7 @@
             <nav class="navBar__main">
                 
                 <a href="index.html">Inicio</a> | </li>
-                <a href="./pages/about.html">Nuestros Servicios</a> |
+                <a href="./pages/ourServices.html">Nuestros Servicios</a> |
                 <a href="/pricing">Tarifas</a> |
                 <a href="/contact">Contactanos</a>
                 
@@ -402,10 +402,14 @@
     // Add an event listener to the checkbox to detect changes in its state
     checkbox.addEventListener("change", function() {
     // Log the state of the checkbox to the console
-    console.log(heroContainer);
+   
     
     burgerState[0].classList.toggle("isOpen");
-    mainExternalContainer[0].classList.toggle("isOpen");
+    heroContainer[0].classList.toggle("isOpenHidden")
+
+    
+
+    
 
     });
 

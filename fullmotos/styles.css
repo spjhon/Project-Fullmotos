@@ -17,7 +17,7 @@
   *::before,
   *::after {
     box-sizing: border-box; /*Esto es estandar para el box model*/
-    transition: all 0.2s ease-out;
+    
   }
 
   h1,h2,h3,h4,h5,h6,p {
@@ -25,7 +25,7 @@
   }
   
   img {
-    /*Este es otro estandar recomendado para estos projectos*/mainex
+    /*Este es otro estandar recomendado para estos projectos*/
     max-width: 100%;
     display: block;
   }
@@ -252,6 +252,7 @@
   position: absolute;
   top: 1.5em;
   right: 1.5em;
+  display: none;
 
 }
 
@@ -383,6 +384,10 @@
   margin: 0.5em 0.5em;
 }
 
+.iconAndText svg {
+  min-width: 2em;
+}
+
 .iconAndText p {
   margin-left: 0.5em;
 }
@@ -450,6 +455,9 @@
   margin-left: 0.5em;
 }
 
+.isOpen {
+  height: 100vh;
+}
 
 /*Responsive styles for the index.html*/
 
@@ -476,10 +484,21 @@
     grid-row: 1; /* Second row */
   }
 
-  .navBar.isOpen {
+  .heroContainer__background {
+    justify-content: center;
     
-    min-height: 100vh;
-    min-height: 100dvh
+  }
+
+  .heroContainer__videoBanner {
+    margin: 0;
+  }
+
+  .heroContainer__title {
+    margin: 0;
+  }
+
+  .heroContainer.isOpenHidden {
+    display: none;
   }
 
   .navBar__rotating-text {
@@ -487,22 +506,45 @@
     top: 0.7em;
   }
 
+  .navBar__burger-container {
+    display: block;
+  }
+
   .navBar__card {
-    translate: 500px;
+    display: none;
   }
 
   .navBar.isOpen .navBar__card {
     align-self: flex-end;
     margin-bottom: 1em;
-    translate: 0px;
+    display: block;
   }
 
   .navBar__main {
-    translate: 500px
+    display: none;
   }
 
   .navBar.isOpen .navBar__main {
-    translate: 0px;
+    display: block;
+    font-size: 3rem;
   }
+
+
+  .card--video {
+    width: 18em;
+    height: 15em;
+  }
+
+  .heroContainer__footer, .footer__container {
+    height: 90vh;
+    justify-content: center;
+  }
+
+  .footer__container__addressCard {
+    align-self: center;
+    font-size: 1rem;
+  }
+
+
 
 }
