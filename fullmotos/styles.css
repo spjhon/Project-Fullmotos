@@ -165,7 +165,12 @@
     position: absolute;
     z-index: 1;
     margin-left: 1.5em;
-    top: 32%;
+    top: 22%;
+  }
+
+  .title__logo{
+    margin-top: 1em;
+    text-align: center;
   }
  
   .heroContainer__videoBanner{
@@ -220,6 +225,11 @@
   letter-spacing: -0.09em;
   font-size: 10rem;
   line-height: 0.7;  
+}
+
+.whatssappCachFrase {
+  font-size: 1.3rem;
+  font-weight: bold;
 }
 
   /*navbar*/
@@ -306,6 +316,13 @@
   font-size: 0.8rem;
   margin-left: 1.5em;
   margin-bottom: 1.5em;
+  border-left: 1px solid #727679;
+
+  padding-left: 1.5em;
+}
+
+.footer__container__addressCard > h2 {
+  margin-bottom: 1.5em;
 }
 
 .iconAndText {
@@ -319,8 +336,11 @@
 }
 
 .footer__container__logos{
-  width: 10rem;
+  max-width: 20rem;
   margin-right: 1.5em;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .footer__container__copyrightReserved{
