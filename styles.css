@@ -56,7 +56,6 @@
   overflow: hidden;
   max-width: 1920px;
   margin: 0 auto;
-  margin: 0;
   padding: 0;
  
 }
@@ -73,7 +72,7 @@
   }
   
   .heroContainer::-webkit-scrollbar {
-    width: 0px; /* Adjust as needed */
+    width: 0px; /* Adjust as needed this is for a no visible scrollbar */
   }
   
   .heroContainer__scrollContainer {
@@ -160,15 +159,21 @@
     }
   }
 
+
+  /* The whole container for the title and the whatssapp logo*/
+
+  .heroContainer__title{
+    margin-left: 1.5em;
+  }
+
+
+/* The whatssapp logo*/
   .title__logo{
     margin-top: 1em;
     text-align: center;
   }
 
-  .heroContainer__title{
-    margin-left: 1.5em;
-  }
- 
+  /*the video tag as is*/
   .heroContainer__videoBanner{
     object-fit: cover;
     border: 2px solid black;
@@ -232,16 +237,16 @@
 
   /*navbar*/
   
-  .navBar {
-    display: flex;
-    justify-content: flex-end;
-    position: relative;
-    overflow: visible;
-    width: 100%;
-    border-top: 1px outset #727679;
-    min-height: 10vh;
-    min-height: 10dvh
-  }
+.navBar {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  overflow: visible;
+  width: 100%;
+  border-top: 1px outset #727679;
+  min-height: 10vh;
+  min-height: 10dvh
+}
 
   /*Styles for the burguer mobile button*/
 
@@ -254,7 +259,7 @@
 }
 
 
-/* This is hidden */
+/* This is hidden, para esconder el checker y dejar los span versen visibles */
 #State{
   display: none;
 }
@@ -336,6 +341,7 @@
     margin-bottom: 0.5em;
   }
 
+  /*Fill colors for the social media svgs*/
   svg {
     fill: #727679; /* Initial color */
     transition: fill 0.3s ease; /* Transition property, duration, and timing function */
@@ -367,7 +373,6 @@
   margin-left: 1.5em;
   margin-bottom: 1.5em;
   border-left: 1px solid #727679;
-
   padding-left: 1.5em;
 }
 
@@ -410,10 +415,6 @@
 
 
 
-
-
-
-
 /*This is the code for the 3d effect on the card, there is no bem here to not mess up the js file*/
 
 
@@ -452,6 +453,7 @@
   margin-left: 0.5em;
 }
 
+/*This is the code for the open menu when the checked changes*/
 .isOpen {
   height: 100dvh;
 }
