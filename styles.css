@@ -476,7 +476,7 @@
     align-items: center;
     justify-content: space-between;
     flex-direction: column-reverse;
-    margin: -2px;
+    margin: -3px 0px;
 
     /*min-height: 100vh;
     min-height: 100dvh;
