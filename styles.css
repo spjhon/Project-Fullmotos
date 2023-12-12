@@ -63,6 +63,8 @@
   overflow: hidden;
   max-width: 1920px;
   margin: 0 auto;
+  margin: 0;
+  padding: 0;
 }
 
 /*CSS for the header, title, clip-path text animation, scroll botton*/
