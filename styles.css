@@ -456,7 +456,7 @@
 }
 
 .isOpen {
-  height: 100vh;
+  height: 100dvh;
 }
 
 /*Responsive styles for the index.html*/
