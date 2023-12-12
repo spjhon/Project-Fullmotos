@@ -8,7 +8,6 @@
   
   :root {
     font-size: calc(0.9em + 0.1vw);
-    
    }
 
 /*Initial standars css properties*/
@@ -17,11 +16,9 @@
   *::before,
   *::after {
     box-sizing: border-box; /*Esto es estandar para el box model*/
-    
-  }
-
-  h1,h2,h3,h4,h5,h6,p,div {
+    /*agregar esto en la proxima*/
     margin: 0;
+    padding: 0;
   }
   
   img {
@@ -37,15 +34,9 @@
     color-scheme: dark; /*Esto es para que el sistema tenga preferencia entre dark y light
     si se utiliza light y dark juntos el browser va a mirar el defult del sistema*/
     background-color: black;
-    margin: 0;
     
   }
   
-  body {
-    margin: 0;
-  }
-
-  body {overflow-x: hidden;}
   
   .visually-hidden:not(:focus):not(:active) { /*El codigo viene de https://www.a11yproject.com/posts/how-to-hide-content/*/ 
     clip: rect(0 0 0 0);
@@ -502,6 +493,7 @@
 
   .heroContainer__title {
     margin: 0;
+    
   }
 
   .heroContainer.isOpenHidden {
@@ -540,7 +532,10 @@
   .card--video {
     width: 18em;
     height: 15em;
+    margin-bottom: 10em;
   }
+
+  
 
   .heroContainer__footer, .footer__container {
     height: 90vh;
