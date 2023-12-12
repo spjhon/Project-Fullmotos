@@ -37,6 +37,7 @@
     color-scheme: dark; /*Esto es para que el sistema tenga preferencia entre dark y light
     si se utiliza light y dark juntos el browser va a mirar el defult del sistema*/
     background-color: black;
+    margin: 0;
     
   }
   
