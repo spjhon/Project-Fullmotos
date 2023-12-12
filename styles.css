@@ -500,6 +500,10 @@
     display: none;
   }
 
+  .heroContainer__scrollContainer {
+    margin-bottom: 4em;
+  }
+
   .navBar__rotating-text {
     align-self: flex-start;
     top: 0.7em;
