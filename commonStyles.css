@@ -81,7 +81,6 @@
   /*este pedazo de codigo se separa el heroContainer principal para poder hacer el overflow*/
   .heroContainer__background{
     min-height: 90vh;
-    background-image: url("./images/mainBackground.webp");
     background-size: cover;
     background-position: center;
     display: flex;
