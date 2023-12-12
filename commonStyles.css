@@ -317,6 +317,10 @@
     font-size: 3rem;
   }
 
+  .heroContainer.isOpenHidden {
+    display: none;
+  }
+
   .heroContainer__footer, .footer__container {
     height: 90vh;
     justify-content: center;
