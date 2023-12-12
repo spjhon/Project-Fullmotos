@@ -1,0 +1,226 @@
+/*El chevron el la animacion para que se baje a la seccion de logos y horarios */
+  
+.chevron {
+    position: absolute;
+    width: 28px;
+    height: 8px;
+    opacity: 0;
+    transform: scale3d(0.5, 0.5, 0.5);
+    animation: move 3s ease-out infinite;
+  }
+  
+  .chevron:first-child {
+    animation: move 3s ease-out 1s infinite;
+  }
+  
+  .chevron:nth-child(2) {
+    animation: move 3s ease-out 2s infinite;
+  }
+  
+  .chevron:before,
+  .chevron:after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 51%;
+    background: #fff;
+  }
+  
+  .chevron:before {
+    left: 0;
+    transform: skew(0deg, 30deg);
+  }
+  
+  .chevron:after {
+    right: 0;
+    width: 50%;
+    transform: skew(0deg, -30deg);
+  }
+  
+  @keyframes move {
+    25% {
+      opacity: 1;
+  
+    }
+    33% {
+      opacity: 1;
+      transform: translateY(30px);
+    }
+    67% {
+      opacity: 1;
+      transform: translateY(40px);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+    }
+  }
+  
+  .chevrontext {
+    display: block;
+    margin-top: 75px;
+    margin-left: -30px;
+    font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+    font-size: 0.75rem;
+    color: #fff;
+    text-transform: uppercase;
+    white-space: nowrap;
+    opacity: .25;
+    animation: pulse 2s linear alternate infinite;
+  }
+  
+  @keyframes pulse {
+    to {
+      opacity: 1;
+    }
+  }
+
+/*the video tag as is*/
+.heroContainer__videoBanner{
+    object-fit: cover;
+    border: 2px solid black;
+    border-radius: 20px;
+    margin-right: 1.5em;
+  }
+
+
+
+/* The whole container for the title and the whatssapp logo*/
+
+.heroContainer__title{
+    margin-left: 1.5em;
+  }
+
+  
+/* The whatssapp logo*/
+.title__logo{
+    margin-top: 1em;
+    text-align: center;
+  }
+
+  /*Shadow for the header text*/
+
+  .mainShadow {
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+    font-size: 3.875rem;
+    text-align: left;
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+
+    &.retroshadow {
+      color: #d5d5d5;
+      text-shadow: 
+        4px 4px 0px  #2c2c2c, 
+        7px 7px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    &.insetshadow {
+      font-size: 1rem;
+      color: #202020;
+      border-radius: 10px;
+      background-color: #d5d5d5;
+      letter-spacing: .1em;
+      text-shadow: 
+        -1px -1px 1px #111, 
+    }
+  }
+
+/*Styles for the header and the differents sizes*/
+
+.cdaHeader{
+  letter-spacing: -0.09em;
+  font-size: 10rem;
+  line-height: 0.7;  
+}
+
+.whatssappCachFrase {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.heroContainer__scrollContainer {
+    position: absolute;
+    bottom: 2%;
+    right: 1.5em;
+  }
+
+/*Styles fot the rotating colorfull text*/
+
+.navBar__rotating-text{
+  position: absolute;
+  align-self: center;
+  left: 1.5em;
+}
+
+   /*This is the code for the 3d effect on the card, there is no bem here to not mess up the js file*/
+
+
+
+.card {
+    font-size: 0.66rem;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.2), 0 0 5px rgba(0,0,0,0.15);
+    transform: scale3d(1, 1, 1);
+    transition: all 0.2s ease-out, filter 0.75s ease-out;
+    background: rgba(0,0,0,0.2);
+    filter: grayscale(0.1) saturate(95%) brightness(95%) contrast(90%);
+    
+  }
+  
+  .card--video {
+    height: 15rem;
+    width: 26.625rem;
+  }
+  
+  .card:hover {
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4), 0 0 15px rgba(0,0,0,0.3);
+    filter: grayscale(0) saturate(105%) brightness(100%) contrast(100%);
+  }
+  
+  .card > .shineLayer {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 80%);
+    transition: all 0.2s ease-out;
+  }
+  
+  .card__text > p {
+    margin: 0;
+    margin-left: 0.5em;
+  }
+  
+
+  @media (max-width: 50em) {
+    .heroContainer__videoBanner {
+        margin: 0;
+      }
+    
+      .heroContainer__title {
+        margin: 0;
+        
+      }
+    
+      .heroContainer.isOpenHidden {
+        display: none;
+      }
+    
+      .heroContainer__scrollContainer {
+        margin-bottom: 6em;
+      }
+    
+      .navBar__rotating-text {
+        align-self: flex-start;
+        top: 0.7em;
+      }
+
+      .card--video {
+        width: 18em;
+        height: 15em;
+        margin-bottom: 10em;
+      }
+  }
+
+
+ 

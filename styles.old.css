@@ -477,12 +477,7 @@
     max-width: 1920px;
     margin: 0 auto;*/
   }
-  .mainExternalContainer:first-child {
-    grid-row: 2; /* Second row */
-  }
-  .mainExternalContainer::nth-child(2) {
-    grid-row: 1; /* Second row */
-  }
+  
 
   .heroContainer__background {
     justify-content: center;
