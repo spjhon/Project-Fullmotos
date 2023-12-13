@@ -314,7 +314,7 @@
             <div class="navBar">
 
                 <div class="navBar__burger-container">
-                    <input type="checkbox" id="State" />
+                    <input type="checkbox" id="State"  />
                     <label id="burguer" for="State">
                     <span></span>
                     <span></span>
@@ -382,9 +382,7 @@
             
         </div>
     
-    <script src="https://unpkg.com/@barba/core"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
-    <script type="module" src="./barba.js"></script>
+    
     <script type="module" src="./cardAnimation.js"></script>
     <script>
 
@@ -405,7 +403,7 @@
     let checkbox = document.getElementById("State");
     let burgerState = document.getElementsByClassName ("navBar");
     let heroContainer = document.getElementsByClassName ("heroContainer");
-    let mainExternalContainer = document.getElementsByClassName ("mainExternalContainer");
+    
 
 
     // Add an event listener to the checkbox to detect changes in its state
@@ -414,11 +412,7 @@
    
     
     burgerState[0].classList.toggle("isOpen");
-    heroContainer[0].classList.toggle("isOpenHidden")
-
-    
-
-    
+    heroContainer[0].classList.toggle("isOpenHidden");
 
     });
 
