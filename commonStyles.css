@@ -85,7 +85,7 @@
     background-position: center;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    
     flex-wrap: wrap
     
   }
@@ -163,7 +163,7 @@
     text-align: center;
   }
 
-  .navBar__main > a {
+  a {
     color: #727679;
     transition: color 0.3s ease;
     text-decoration: none;

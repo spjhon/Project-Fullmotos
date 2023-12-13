@@ -1,5 +1,6 @@
 .heroContainer__background {
-  background-image: url("./images/mainBackground.webp");
+  background-image: url("./images/backgrounDark.webp");
+  justify-content: space-between;
 }
 
 /*El chevron el la animacion para que se baje a la seccion de logos y horarios */
