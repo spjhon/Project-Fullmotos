@@ -37,11 +37,11 @@
     z-index: -1;
 }
 /* :checked */
-input:checked ~ .acordeon-content {
+.acordeon input:checked ~ .acordeon-content {
     max-height: 10em;
 }
 /* Acordeon Icon*/
-label::after {
+.acordeon label::after {
     position: absolute;
     right: 0;
     top: 0;
@@ -54,11 +54,11 @@ label::after {
     transition: all .35s;
 }
 /* Acordeon Icon Content*/
-input[type=checkbox] + label::after {
+.acordeon input[type=checkbox] + label::after {
     content: "+";
 }
 /* Acordeon Icon Content Animation*/
-input[type=checkbox]:checked + label::after {
+.acordeon input[type=checkbox]:checked + label::after {
     -webkit-transform: rotate(315deg);
     transform: rotate(315deg);
 }
