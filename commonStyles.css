@@ -267,6 +267,7 @@
 /*This is the code for the open menu when the checked changes*/
 .isOpen {
   height: 100dvh;
+  margin: auto;
 }
 
 /*Responsive styles for the index.html*/
@@ -288,9 +289,7 @@
     justify-content: center;
   }
 
-  .navBar {
-    margin: -3px 0px;
-  }
+  
 
   .navBar__burger-container {
     display: block;
