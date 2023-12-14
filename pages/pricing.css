@@ -4,3 +4,74 @@
     gap: 5em;
     border-bottom: 1em solid black;
   }
+
+
+  :root{
+    --bg-clr: #AF2830;
+    --card-clr: #22161A;
+    --text-clr: #B8B0B2;
+    --partition-clr: #2D1F24;
+  }
+
+
+  .priceContainer{
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    background: var(--bg-clr);
+    color: var(--text-clr);
+    margin: 6em auto;
+    width: 60%;
+    background: var(--card-clr);
+    padding: 5em 2em;
+    box-shadow: 0px 36px 23px black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .priceContainer .basic, .pro{
+    padding: 1em 4em;
+  }
+  
+  .priceContainer .basic{
+    border-right: 1px solid var(--partition-clr);
+  }
+  
+  .priceContainer h2{
+    font-size: 2.25rem;
+  }
+  
+  .priceContainer h4{
+    font-size: 1.5rem;
+    margin-top: 1em;
+  }
+  
+  .priceContainer h6{
+    font-size: 1rem;
+  }
+  
+  .priceContainer ul{
+    font-size: 1.125rem;
+    margin-top: 2em;
+    margin-left: 1em;
+    line-height: 2rem;
+  }
+  
+  .priceContainer .basic-btn, .pro-btn{
+    width: 100%;
+    border: none;
+    padding: 0.8em 1.5em;
+    margin: 2em 0 0 0;
+    background: var(--bg-clr);
+    color: var(--text-clr);
+    font-size: 1.125rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .priceContainer .basic-btn{
+    background: transparent;
+    color: var(--bg-clr);
+    border: 1px solid var(--bg-clr);
+  }
