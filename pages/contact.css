@@ -13,3 +13,11 @@
   justify-content: center;
   margin: 2em;
 }
+
+@media (max-width: 50em) { 
+
+  iframe {
+    width: calc(600px * 0.5);
+    height: calc(450px * 0.5);
+  }
+}
