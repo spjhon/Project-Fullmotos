@@ -55,7 +55,7 @@
   min-height: 100dvh;
   overflow: hidden;
   max-width: 1920px;
-  margin: -3px auto;
+  margin: 0px auto;
   padding: 0;
  
 }
@@ -101,7 +101,8 @@
   width: 100%;
   border-top: 1px outset #727679;
   min-height: 10vh;
-  min-height: 10dvh
+  min-height: 10dvh;
+  
 }
 
   /*Styles for the burguer mobile button*/
@@ -289,7 +290,9 @@
     justify-content: center;
   }
 
- 
+ .navBar{
+  border-top: none;
+ }
 
   .navBar__burger-container {
     display: block;
