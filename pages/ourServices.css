@@ -119,7 +119,6 @@
 
 .heroContainer__background {
     background-image: url("../images/backgroundOurService.webp");
-    opacity: 1;
     justify-content: center;
     gap: 5em;
     border-bottom: 1em solid black;
@@ -135,7 +134,7 @@
 
   .center {
     display: flex;
-    height: 10em;
+    height: 280px;
     align-items: center;
     justify-content: center;
     
@@ -197,8 +196,13 @@
   @media (max-width: 50em) { 
 
     .heroContainer__background {
-      
+      height: auto;
       gap: 1em;
+      
+    }
+
+    .center {
+      margin: 1em;
     }
 
   }

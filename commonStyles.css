@@ -64,7 +64,7 @@
 
   .heroContainer{
     height: 90vh;
-    min-height: 90dvh;
+    height: 90dvh;
     position: relative;
     overflow-y: auto;
     overflow-x: hidden;
@@ -80,7 +80,7 @@
   
   /*este pedazo de codigo se separa el heroContainer principal para poder hacer el overflow*/
   .heroContainer__background{
-    min-height: 90vh;
+    height: 90vh;
     background-size: cover;
     background-position: center;
     display: flex;
