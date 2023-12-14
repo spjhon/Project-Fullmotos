@@ -55,7 +55,7 @@
   min-height: 100dvh;
   overflow: hidden;
   max-width: 1920px;
-  margin: 0 auto;
+  margin: -3px auto;
   padding: 0;
  
 }
@@ -281,7 +281,7 @@
     align-items: center;
     justify-content: space-between;
     flex-direction: column-reverse;
-    margin: -3px 0px;
+    
     
   }
   
