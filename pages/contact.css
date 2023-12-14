@@ -1,0 +1,6 @@
+.heroContainer__background {
+  background-image: url("../images/contact.webp");
+  justify-content: center;
+  gap: 5em;
+  border-bottom: 1em solid black;
+}

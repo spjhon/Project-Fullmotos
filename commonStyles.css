@@ -80,12 +80,11 @@
   
   /*este pedazo de codigo se separa el heroContainer principal para poder hacer el overflow*/
   .heroContainer__background{
-    height: 90vh;
+    min-height: 90vh;
     background-size: cover;
     background-position: center;
     display: flex;
     align-items: center;
-    
     flex-wrap: wrap
     
   }

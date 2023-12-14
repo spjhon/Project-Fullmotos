@@ -27,6 +27,7 @@
 .section {
   transform-origin: center top;
   transform: scaleY(calc(1 - var(--scale)));
+  
 }
 
 .section > * {
@@ -66,7 +67,10 @@
   width: 100vw;
   height: 100vh;
   z-index: -2;
+  overflow: visible;
 }
+
+
 
 .image-container img {
   display: block;
@@ -137,6 +141,7 @@
     height: 280px;
     align-items: center;
     justify-content: center;
+    margin: 1em;
     
   }
   
@@ -199,10 +204,6 @@
       height: auto;
       gap: 1em;
       
-    }
-
-    .center {
-      margin: 1em;
     }
 
   }
