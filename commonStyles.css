@@ -281,10 +281,15 @@
     justify-content: space-between;
     flex-direction: column-reverse;
     
+    
   }
   
   .heroContainer__background {
     justify-content: center;
+  }
+
+  .navBar {
+    margin: -3px 0px;
   }
 
   .navBar__burger-container {
