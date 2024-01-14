@@ -54,7 +54,15 @@
   padding: var(--space);
   max-width: 55ch;
   width: calc(100% - var(--space));
-  background: hsla(5, 15%, 5%, 0.9);
+  
+	
+}
+
+article.content{
+/* other styles */
+background: rgba(255, 255, 255, .7);
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
 }
 
 .content > * + * {
