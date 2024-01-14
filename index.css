@@ -109,7 +109,7 @@
   .mainShadow {
     font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
     font-size: 3.875rem;
-    text-align: left;
+    text-align: center;
     text-transform: uppercase;
     text-rendering: optimizeLegibility;
 
@@ -142,7 +142,7 @@
 .whatssappCachFrase {
   font-size: 1.3rem;
   font-weight: bold;
-  text-align: center;
+  
 }
 
 .heroContainer__scrollContainer {
