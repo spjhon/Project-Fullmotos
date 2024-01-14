@@ -28,7 +28,7 @@
   }
   
   html {
-    color: #727679;
+    color: #fff;
     letter-spacing: 0.09375em;
     font-family: 'Neuropol', sans-serif;
     color-scheme: dark; /*Esto es para que el sistema tenga preferencia entre dark y light
@@ -164,13 +164,13 @@
   }
 
   a {
-    color: #727679;
+    color: #fff;
     transition: color 0.3s ease;
     text-decoration: none;
   }
 
   a:hover {
-    color: white; /* Color to transition to on hover */
+    color: #727679; /* Color to transition to on hover */
   }
 
   .navBar__card{
@@ -193,12 +193,12 @@
 
   /*Fill colors for the social media svgs*/
   svg {
-    fill: #727679; /* Initial color */
+    fill: #fff; /* Initial color */
     transition: fill 0.3s ease; /* Transition property, duration, and timing function */
   }
 
   svg:hover{
-    fill: white;
+    fill: #727679;
   }
  
   

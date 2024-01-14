@@ -32,13 +32,13 @@
 }
 
 #flip div div {
-  background:#42c58a;
+  background:#242bd1;
 }
 #flip div:first-child div {
-  background:#4ec7f34c;
+  background:#0c7404;
 }
 #flip div:last-child div {
-  background:#DC143C;
+  background:#65728f;
 }
 
 @keyframes show {
